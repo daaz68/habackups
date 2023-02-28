@@ -9,6 +9,7 @@
 !*.sh
 !*.js*
 !zigbee2mqtt/
+!custom_components/
 
 # Comment these 2 lines if you don't want to include your SSH keys
 !.ssh/
