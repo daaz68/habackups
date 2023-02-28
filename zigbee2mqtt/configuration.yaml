@@ -1,0 +1,111 @@
+homeassistant:
+  discovery_topic: homeassistant
+  legacy_entity_attributes: true
+  legacy_triggers: true
+  status_topic: homeassistant
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://192.168.3.33
+  user: pub_client
+  password: enter
+serial:
+  port: /dev/ttyUSB0
+advanced:
+  network_key:
+    - 189
+    - 186
+    - 106
+    - 57
+    - 156
+    - 83
+    - 20
+    - 25
+    - 71
+    - 86
+    - 164
+    - 92
+    - 18
+    - 76
+    - 169
+    - 137
+  devices: null
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+frontend:
+  port: 8099
+device_options:
+  legacy: false
+zigbee_herdsman_debug: true
+devices:
+  '0xa4c1384c9add9c7d':
+    friendly_name: priza_lampa_mare
+    availability: true
+    homeassistant:
+      name: Lampa Mare
+      switch:
+        type: switch
+        object_id: switch
+      light:
+        name: lampa_mare
+        value_template: null
+        state_value_template: '{{ value_json.state }}'
+  '0xa4c138d6422e559b':
+    friendly_name: priza_lampa_mica
+    availability: true
+    homeassistant:
+      name: Lampa Mica
+      switch:
+        type: switch
+        object_id: switch
+      light:
+        name: lampa_mica
+        value_template: null
+        state_value_template: '{{ value_json.state }}'
+  '0x00124b00291949c2':
+    friendly_name: senzor_birou
+    temperature_precision: 2
+    homeassistant:
+      name: Senzor Birou
+  '0x00124b0029197641':
+    friendly_name: senzor_living
+    temperature_precision: 2
+    humidity_precision: 2
+    homeassistant:
+      name: Senzor Living
+    legacy: false
+    optimistic: true
+  '0x00124b00291977a9':
+    friendly_name: senzor_dormitor
+    homeassistant:
+      name: Senzor Dormitor
+    legacy: false
+    optimistic: true
+  '0x00124b0029285370':
+    friendly_name: switch_lampi_living
+    homeassistant:
+      name: Switch Lampi Living
+    legacy: false
+    optimistic: true
+  '0x00124b0029286b2e':
+    friendly_name: switch_leduri_bucatarie
+    homeassistant:
+      name: Switch Leduri Bucatarie
+    legacy: false
+    optimistic: true
+  '0xa4c138bfa7b36506':
+    friendly_name: priza_ups
+  '0x00124b0024c24b1e':
+    friendly_name: releu_led_bucatarie_utile
+  '0x9035eafffe892256':
+    friendly_name: releu_led_bucatarie_hota
+  '0x00124b0029281316':
+    friendly_name: miscare_hol
+    homeassistant:
+      name: Miscare Hol
+    legacy: false
+    optimistic: true
+  '0x00124b00073a079f':
+    friendly_name: router_office
+groups: {}

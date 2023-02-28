@@ -1,0 +1,96 @@
+{
+    "0xa4c1384c9add9c7d": {
+        "voltage": 230,
+        "state": "OFF",
+        "power_outage_memory": "restore",
+        "indicator_mode": "off/on",
+        "child_lock": "UNLOCK",
+        "linkquality": 116,
+        "power": 0,
+        "current": 0,
+        "energy": 0.47,
+        "update": {
+            "state": "idle",
+            "installed_version": 192,
+            "latest_version": 192
+        }
+    },
+    "0xa4c138d6422e559b": {
+        "voltage": 229,
+        "state": "OFF",
+        "power_outage_memory": "restore",
+        "indicator_mode": "off/on",
+        "child_lock": "UNLOCK",
+        "linkquality": 76,
+        "power": 0,
+        "current": 0,
+        "energy": 0.47,
+        "update": {
+            "state": "idle",
+            "installed_version": 192,
+            "latest_version": 192
+        }
+    },
+    "0x00124b00291949c2": {
+        "temperature": 24.29,
+        "voltage": 3000,
+        "battery": 100,
+        "humidity": 43.28,
+        "linkquality": 47
+    },
+    "0x00124b0029197641": {
+        "temperature": 23.36,
+        "humidity": 44.04,
+        "voltage": 3000,
+        "battery": 100,
+        "linkquality": 94
+    },
+    "0x00124b00291977a9": {
+        "temperature": 24.79,
+        "voltage": 3000,
+        "battery": 100,
+        "humidity": 42.24,
+        "linkquality": 116
+    },
+    "0x00124b0029285370": {
+        "voltage": 3100,
+        "battery": 100,
+        "linkquality": 58
+    },
+    "0x00124b0029286b2e": {
+        "voltage": 3100,
+        "battery": 100,
+        "linkquality": 83
+    },
+    "0xa4c138bfa7b36506": {
+        "voltage": 228,
+        "state": "ON",
+        "power_outage_memory": "restore",
+        "indicator_mode": "off/on",
+        "child_lock": "UNLOCK",
+        "power": 0,
+        "current": 0,
+        "energy": 55.34,
+        "linkquality": 40
+    },
+    "0x00124b0024c24b1e": {
+        "state": "OFF",
+        "linkquality": 14
+    },
+    "0x9035eafffe892256": {
+        "state": "OFF",
+        "linkquality": 3
+    },
+    "0x00124b0029281316": {
+        "voltage": 3000,
+        "battery": 100,
+        "occupancy": false,
+        "tamper": false,
+        "battery_low": false,
+        "linkquality": 47
+    },
+    "0x00124b00073a079f": {
+        "led": true,
+        "linkquality": 98
+    }
+}
