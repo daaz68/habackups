@@ -1,0 +1,83 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+influxdb:
+  host: localhost
+  port: 8086
+  database: homeassistant
+  username: !secret influxdb_user
+  password: !secret influxdb_password
+  max_retries: 3
+  measurement_attr: entity_id
+  include:
+    domains:
+      - sensor
+
+zha_toolkit:
+
+mqtt_statestream:
+  base_topic: homeassistant
+  publish_attributes: true
+  publish_timestamps: true
+
+mqtt:
+  sensor:
+    - name: "Light current"
+      state_topic: "pip/sensor/light/current"
+      unit_of_measurement: "mA"
+    - name: "Grid Consumption"
+      state_topic: "pip/sensor/power/grid"
+      unit_of_measurement: "W"
+    - name: "House Consumption"
+      state_topic: "pip/sensor/power/house"
+      unit_of_measurement: "W"
+    - name: "PV1 Current"
+      state_topic: "pip/pv1/current"
+      unit_of_measurement: "A"
+    - name: "PV1 Voltage"
+      state_topic: "pip/pv1/voltage"
+      unit_of_measurement: "V"
+    - name: "PV1 Power"
+      state_topic: "pip/pv1/power"
+      unit_of_measurement: "W"
+    - name: "PV2 Current"
+      state_topic: "pip/pv2/current"
+      unit_of_measurement: "A"
+    - name: "PV2 Voltage"
+      state_topic: "pip/pv2/voltage"
+      unit_of_measurement: "V"
+    - name: "PV2 Power"
+      state_topic: "pip/pv2/power"
+      unit_of_measurement: "W"
+    - name: "PV Total Power"
+      state_topic: "pip/power/pv"
+      unit_of_measurement: "W"
+        # value_template: >-
+    - name: "Daily PV Power"
+      state_topic: "pip/power/daily/solar"
+      unit_of_measurement: "kWh"
+        # {{ '%.2f' | format(states('sensor.pv_total_power') | float ) }}
+    - name: "Daily Output Power"
+      state_topic: "pip/power/daily/total"
+      unit_of_measurement: "kWh"
+  switch:
+    - name: "Grid Status"
+      state_topic: "pip/grid/status"
+      state_off: "OFF"
+      state_on: "ON"
+      command_topic: "pip/grid/control"
+      payload_off: "OFF"
+      payload_on: "ON"

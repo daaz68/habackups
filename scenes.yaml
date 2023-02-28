@@ -1,0 +1,226 @@
+- id: '1675693251874'
+  name: Lampi Living Aprinse
+  entities:
+    switch.lampa_mare:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.09
+      indicator_mode: off/on
+      linkquality: 134
+      power: 5
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mare
+      state: 'on'
+    select.lampa_mare_indicator_mode:
+      options:
+      - 'off'
+      - off/on
+      - on/off
+      - 'on'
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.09
+      indicator_mode: off/on
+      linkquality: 134
+      power: 5
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mare indicator mode
+      state: off/on
+    lock.lampa_mare_child_lock:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.09
+      indicator_mode: off/on
+      linkquality: 134
+      power: 5
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mare child lock
+      supported_features: 0
+      state: unlocked
+    switch.lampa_mica:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.08
+      indicator_mode: off/on
+      linkquality: 87
+      power: 6
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mica
+      state: 'on'
+    select.lampa_mica_indicator_mode:
+      options:
+      - 'off'
+      - off/on
+      - on/off
+      - 'on'
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.08
+      indicator_mode: off/on
+      linkquality: 87
+      power: 6
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mica indicator mode
+      state: off/on
+    lock.lampa_mica_child_lock:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.08
+      indicator_mode: off/on
+      linkquality: 87
+      power: 6
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mica child lock
+      supported_features: 0
+      state: unlocked
+  icon: mdi:floor-lamp-dual-outline
+  metadata: {}
+- id: '1675693276823'
+  name: Lampi Living Stinse
+  entities:
+    switch.lampa_mare:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.09
+      indicator_mode: off/on
+      linkquality: 138
+      power: 5
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mare
+      state: 'off'
+    select.lampa_mare_indicator_mode:
+      options:
+      - 'off'
+      - off/on
+      - on/off
+      - 'on'
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.09
+      indicator_mode: off/on
+      linkquality: 138
+      power: 5
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mare indicator mode
+      state: off/on
+    lock.lampa_mare_child_lock:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.09
+      indicator_mode: off/on
+      linkquality: 138
+      power: 5
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mare child lock
+      supported_features: 0
+      state: unlocked
+    switch.lampa_mica:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.08
+      indicator_mode: off/on
+      linkquality: 91
+      power: 6
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mica
+      state: 'off'
+    select.lampa_mica_indicator_mode:
+      options:
+      - 'off'
+      - off/on
+      - on/off
+      - 'on'
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.08
+      indicator_mode: off/on
+      linkquality: 91
+      power: 6
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mica indicator mode
+      state: off/on
+    lock.lampa_mica_child_lock:
+      child_lock: UNLOCK
+      current: 0.03
+      energy: 0.08
+      indicator_mode: off/on
+      linkquality: 91
+      power: 6
+      power_outage_memory: restore
+      update:
+        installed_version: 192
+        latest_version: 192
+        state: idle
+      update_available:
+      voltage: 229
+      friendly_name: Lampa Mica child lock
+      supported_features: 0
+      state: unlocked
+  icon: mdi:floor-lamp-dual-outline
+  metadata: {}

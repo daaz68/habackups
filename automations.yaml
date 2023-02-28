@@ -1,0 +1,237 @@
+- id: '1675698022252'
+  alias: Kitchen Leds Control from Switch (single tap)
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.switch_leduri_bucatarie_action
+    attribute: action
+    to: single
+  condition: []
+  action:
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id: input_boolean.leduri_bucatarie_hota_helper
+  mode: single
+- id: '1675713578540'
+  alias: Kitchen Filter Led Control (automation)
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.leduri_bucatarie_hota_helper
+    from: 'on'
+    to: 'off'
+    id: trigger_on_off
+  - platform: state
+    entity_id:
+    - input_boolean.leduri_bucatarie_hota_helper
+    from: 'off'
+    to: 'on'
+    id: trigger_off_on
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: trigger_on_off
+      sequence:
+      - type: turn_off
+        device_id: 46a2978416bdfd89354c29ef00b1c517
+        entity_id: switch.releu_led_bucatarie_hota
+        domain: switch
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: trigger_off_on
+      sequence:
+      - type: turn_on
+        device_id: 46a2978416bdfd89354c29ef00b1c517
+        entity_id: switch.releu_led_bucatarie_hota
+        domain: switch
+  mode: single
+- id: '1675753453738'
+  alias: Living Lamps Control from Switch
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.switch_lampi_living_action
+    attribute: action
+    to: single
+  condition: []
+  action:
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.lampi_living_helper
+  mode: single
+- id: '1675754334404'
+  alias: Living Lamps Control (automation)
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.lampi_living_helper
+    from: 'on'
+    to: 'off'
+    id: trigger_on_off
+  - platform: state
+    entity_id:
+    - input_boolean.lampi_living_helper
+    from: 'off'
+    to: 'on'
+    id: trigger_off_on
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: trigger_on_off
+      sequence:
+      - type: turn_off
+        device_id: 36e7a10b4c48796276e895455bbcbdc8
+        entity_id: switch.lampa_mare
+        domain: switch
+      - type: turn_off
+        device_id: 8da0f916f1e875fd68205ad2a52c85c7
+        entity_id: switch.lampa_mica
+        domain: switch
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: trigger_off_on
+      sequence:
+      - type: turn_on
+        device_id: 36e7a10b4c48796276e895455bbcbdc8
+        entity_id: switch.lampa_mare
+        domain: switch
+      - type: turn_on
+        device_id: 8da0f916f1e875fd68205ad2a52c85c7
+        entity_id: switch.lampa_mica
+        domain: switch
+  mode: single
+- id: '1675773063434'
+  alias: UPS Power (automation)
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.priza_ups_helper
+    from: 'on'
+    to: 'off'
+    id: priza_on_off
+  - platform: state
+    entity_id:
+    - input_boolean.priza_ups_helper
+    from: 'off'
+    to: 'on'
+    id: priza_off_on
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: priza_on_off
+      sequence:
+      - type: turn_off
+        device_id: 9c5542e635e28d2a46c3110fb79785c8
+        entity_id: switch.priza_ups
+        domain: switch
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: priza_off_on
+      sequence:
+      - type: turn_on
+        device_id: 9c5542e635e28d2a46c3110fb79785c8
+        entity_id: switch.priza_ups
+        domain: switch
+  mode: single
+- id: '1675858551680'
+  alias: Kitchen Utils Led Control (automation)
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_boolean.leduri_bucatarie_utile_helper
+    from: 'on'
+    to: 'off'
+    id: trigger_on_off
+  - platform: state
+    entity_id:
+    - input_boolean.leduri_bucatarie_utile_helper
+    from: 'off'
+    to: 'on'
+    id: trigger_off_on
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: trigger_on_off
+      sequence:
+      - type: turn_off
+        device_id: 46a2978416bdfd89354c29ef00b1c517
+        entity_id: switch.releu_led_bucatarie_utile
+        domain: switch
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: trigger_off_on
+      sequence:
+      - type: turn_on
+        device_id: 46a2978416bdfd89354c29ef00b1c517
+        entity_id: switch.releu_led_bucatarie_utile
+        domain: switch
+  mode: single
+- id: '1675858952388'
+  alias: Kitchen Leds Control from Switch (double tap)
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - sensor.switch_leduri_bucatarie_action
+    attribute: action
+    to: double
+  condition: []
+  action:
+  - service: input_boolean.toggle
+    data: {}
+    target:
+      entity_id: input_boolean.leduri_bucatarie_utile_helper
+  mode: single
+- id: '1676373883819'
+  alias: Miscare pe hol detectata (automation)
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 7690fce1a506261e127af0f82c8efe3c
+    entity_id: binary_sensor.miscare_hol_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.senzor_miscare_hol
+  mode: single
+- id: '1676373948492'
+  alias: Miscare pe hol incetata (automation)
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: 7690fce1a506261e127af0f82c8efe3c
+    entity_id: binary_sensor.miscare_hol_occupancy
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: input_boolean.turn_off
+    data: {}
+    target:
+      entity_id: input_boolean.senzor_miscare_hol
+  mode: single
